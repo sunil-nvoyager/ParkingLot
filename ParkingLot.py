@@ -22,6 +22,7 @@ class ParkingLot:
 				return i
 
 	def park(self,regno,color):
+		
 		if self.numOfOccupiedSlots < self.capacity: 
 			slotid = self.getEmptySlot()
 			self.slots[slotid] = Vehicle.Car(regno,color)
@@ -127,6 +128,7 @@ class ParkingLot:
 
 def main():
 
+	
 	parkinglot = ParkingLot()
 	parser = argparse.ArgumentParser()
 	parser.add_argument('-f', action="store", required=False, dest='src_file', help="Input File")
