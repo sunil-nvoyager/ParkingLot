@@ -22,6 +22,23 @@ class ParkingLot:
 				return i
 
 	def park(self,regno,color):
+		"""Park a vehicle in the parking lot.
+
+		This method checks if there are available slots in the parking lot. If
+		there is an empty slot, it parks the vehicle by creating a new instance
+		of the Vehicle.Car class with the provided registration number and
+		color. It updates the number of occupied slots and returns the slot ID
+		where the vehicle is parked. If the parking lot is full, it returns -1.
+
+		Args:
+		    regno (str): The registration number of the vehicle.
+		    color (str): The color of the vehicle.
+
+		Returns:
+		    int: The slot ID where the vehicle is parked, or -1 if the parking lot is
+		        full.
+		"""
+
 		
 		if self.numOfOccupiedSlots < self.capacity: 
 			slotid = self.getEmptySlot()
@@ -127,6 +144,16 @@ class ParkingLot:
 			exit(0)
 
 def main():
+	"""Run the main application for the parking lot system.
+
+	This function initializes a ParkingLot instance and sets up an argument
+	parser to handle input from either a specified file or user input from
+	the command line. If a source file is provided, it reads each line from
+	the file and processes it through the ParkingLot's show method. If no
+	file is specified, it enters an infinite loop, prompting the user for
+	input until interrupted.
+	"""
+
 
 	
 	parkinglot = ParkingLot()
