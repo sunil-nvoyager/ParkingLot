@@ -22,6 +22,12 @@ class ParkingLot:
 				return i
 
 	def park(self,regno,color):
+		"""Load the processed files map from a JSON file.
+
+		Returns:
+		    dict: The processed files map.
+		"""
+
 		
 		if self.numOfOccupiedSlots < self.capacity: 
 			slotid = self.getEmptySlot()
@@ -127,6 +133,12 @@ class ParkingLot:
 			exit(0)
 
 def main():
+	"""Load the processed files map from a JSON file.
+
+	Returns:
+	    dict: The processed files map.
+	"""
+
 
 	
 	parkinglot = ParkingLot()
